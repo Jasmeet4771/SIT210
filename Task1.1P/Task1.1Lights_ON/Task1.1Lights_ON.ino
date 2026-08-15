@@ -3,7 +3,7 @@
 const int Pin_Porch = 5;
 const int Pin_Hallway = 6;
 
-// for the timer
+// variables for the timer
 long porchTime = 0;
 long hallwayTime = 0;
 
@@ -46,6 +46,7 @@ void loop()
   checkHallwayTimer();
 }
 
+//function to check if switch pressed and take action
 void checkSwitch() 
 {
   // detects if switch is pressed
@@ -72,6 +73,7 @@ void checkSwitch()
   lastSwitchState = Led_Switch;
 }
 
+// this function turns of porch light after 30sec
 void checkPorchTimer() 
 {
   // porch light on for 30 sec
@@ -84,6 +86,7 @@ void checkPorchTimer()
     Serial.println("Porch OFF");
   }
 
+// this function turns of hallway light after 30sec
   void checkHallwayTimer() 
   {
     // hallway light on for 60 sec
